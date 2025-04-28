@@ -1,0 +1,10 @@
+def two_sum(nums, target)
+  h = {}
+  (0..nums.size - 1).each do |i|
+    complement = target - nums[i]
+
+    return [i, h[complement]] if h.key?(complement)
+
+    h[nums[i]] = i
+  end
+end
