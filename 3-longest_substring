@@ -1,0 +1,13 @@
+def length_of_longest_substring(s)
+  max_len = 0
+  i = 0
+  h = {}
+
+  (0...s.length).each do |j|
+    i = [h[s[j]], i].max if h[s[j]].to_i.positive?
+    max_len = [max_len, j - i + 1].max
+    h[s[j]] = j + 1
+  end
+
+  max_len
+end
