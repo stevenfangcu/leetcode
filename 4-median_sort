@@ -1,0 +1,5 @@
+def find_median_sorted_arrays(nums1, nums2)
+  sorted = (nums1 + nums2).sort
+  len = sorted.length
+  (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+end
